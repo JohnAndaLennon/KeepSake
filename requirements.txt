@@ -1,0 +1,27 @@
+# Keepsake — Python dependencies
+#
+# Minimum versions are pinned for security reasons, not just compatibility.
+# See notes below each package for why the floor was chosen.
+
+# Argon2id password hashing (master password + recovery PIN key derivation)
+# Official Python 3.13/3.14 support landed in 25.1.0 with no code changes required.
+argon2-cffi>=25.1.0
+
+# AES-GCM authenticated encryption for vault + TOTP companion file
+# >=46.0.7 fixes a buffer-overflow issue with non-contiguous buffers
+# (CVE-2026-39892); >=50.0.0 fixes a Bleichenbacher-oracle timing issue in
+# RecipientInfo unwrapping (CVE-2026-69247). Pin to the highest known-safe floor.
+cryptography>=50.0.0
+
+# TOTP generation/verification for recovery flow
+pyotp>=2.9.0
+
+# Cross-platform clipboard access for password/secret copy
+pyperclip>=1.9.0
+
+# Creates seed phrase for TOTP Recovery
+mnemonic>=0.21
+
+# Creates QR Codes for TOTP Setup
+qrcode>=7.4.2
+
