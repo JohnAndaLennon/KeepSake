@@ -38,8 +38,8 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/yourusername/keepsake"
-Issues = "https://github.com/yourusername/keepsake/issues"
+Homepage = "https://github.com/JohnAndaLennon/keepsake"
+Issues = "https://github.com/JohnAndaLennon/keepsake/issues"
 
 [project.scripts]
 keepsake = "KeepSake:main"
